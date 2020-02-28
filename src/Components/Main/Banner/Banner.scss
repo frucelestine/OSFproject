@@ -1,0 +1,63 @@
+.banner {
+  font-family: "Lato", sans-serif;
+  width: 100%;
+  height: 445px;
+  color: #ffffff;
+  background-image: url("../../../Images/banner.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+
+  & .textContainer {
+    position: absolute;
+    top: 40%;
+    transform: translateY(-40%);
+    text-align: center;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0 auto;
+
+    & .bannerHead {
+      font-size: 48.5px;
+      font-weight: 900;
+      margin-bottom: 40px;
+    }
+
+    & .bannerText {
+      font-size: 14px;
+      max-width: 320px;
+      margin: auto;
+    }
+  }
+}
+
+//Media Querry
+
+@media screen and (min-width: 768px) and (max-width: 1280px) {
+  .textContainer{
+    width: fit-content;
+  }
+}
+
+@media screen and (min-width:320px) and (max-width:767px){
+  .banner{
+    height: 170px;
+
+    & .textContainer{
+      padding: 0;
+      right: 50%;
+      transform: translateX(50%);
+      top: unset;
+      left: unset;
+
+      & .bannerHead{
+        font-size: 20px;
+        padding-top: 30px;
+        
+      }
+
+    }
+
+
+  }
+}

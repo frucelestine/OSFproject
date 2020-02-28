@@ -1,0 +1,556 @@
+@mixin flexStyle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.shoppingCart {
+  font-family: "Lato", sans-serif;
+  background-color: #f1edea;
+  margin-top: 80px;
+  text-align: center;
+  padding: 52px 50px;
+  position: relative;
+
+  & .shoppingBrowse {
+    font-size: 13px;
+    text-align: center;
+    color: #45413e;
+    margin-bottom: 20px;
+
+    & span {
+      color: #84bc22;
+    }
+
+    & span:nth-child(2) {
+      color: #45413e;
+    }
+  }
+
+  & .shoppingHead {
+    text-align: center;
+    font-size: 48px;
+    color: #45413e;
+    margin-bottom: 50px;
+    font-weight: 900;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      display: inline-block;
+      background-color: #fff;
+      height: 2px;
+      width: 360px;
+      top: 32px;
+      left: 0;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      display: inline-block;
+      background-color: #fff;
+      height: 2px;
+      width: 360px;
+      top: 32px;
+      right: 0;
+    }
+  }
+
+  & .shoppingBody {
+    background-color: #fff;
+    border-radius: 5px 5px 0 0;
+    padding: 95px 95px 43px;
+    margin-bottom: 2px;
+
+    & .shoppingItem {
+      @include flexStyle();
+      margin-bottom: 30px;
+
+      & .itemInfo {
+        @include flexStyle();
+        max-width: 450px;
+
+        & .itemImg {
+          height: 90px;
+          width: 100px;
+          background-color: #c7c7c7;
+        }
+
+        & .itemText {
+          text-align: left;
+          padding-left: 20px;
+
+          & .textDescription {
+            font-size: 16px;
+            margin: 0;
+          }
+
+          & .textPrice {
+            color: #bdc3c7;
+            font-size: 14px;
+            font-weight: 700;
+          }
+        }
+      }
+
+      & .itemPricing {
+        @include flexStyle();
+        width: 375px;
+
+        & .quantity {
+          display: inline-block;
+          width: 114px;
+        }
+
+        & .pricePerItem {
+          color: #45413e;
+          font-size: 30px;
+          font-weight: 900;
+        }
+
+        & .deleteBtn {
+          height: 30px;
+          width: 30px;
+          border-radius: 50%;
+          border: 2px solid #e8e2d6;
+          background-color: transparent;
+          color: #a2a09e;
+          text-align: center;
+          line-height: 5px;
+          position: relative;
+
+          &::before {
+            content: " ";
+            position: absolute;
+            background-image: url("../../Images/delete.png");
+            background-repeat: no-repeat;
+            top: 9px;
+            left: 9px;
+            height: 10px;
+            width: 10px;
+          }
+
+          &:focus {
+            outline: unset;
+          }
+        }
+      }
+    }
+  }
+
+  & .billing {
+    background-color: #fff;
+    border-radius: 0 0 5px 5px;
+    @include flexStyle();
+    align-items: flex-start !important;
+    padding: 80px 95px 95px;
+
+    & .shoppingCoupon {
+      & .useCoupon {
+        & .enterCoupon {
+          width: 222px;
+          margin-right: 13px;
+          border: 2px solid #e8e2d6;
+          border-radius: 40px;
+          padding: 8px 20px;
+          font-size: 14px;
+          color: #45413e;
+        }
+
+        & .applyBtn {
+          width: 117px;
+          border: 2px solid #84bc22;
+          background: transparent;
+          padding: 8px 0;
+          color: #84bc22;
+          border-radius: 40px;
+        }
+      }
+    }
+
+    & .checkout {
+      & .updateCart {
+        margin-bottom: 44px;
+
+        & .updateCartBtn {
+          width: 165px;
+          border: 2px solid #84bc22;
+          background: transparent;
+          padding: 8px 0;
+          margin-right: 13px;
+          color: #84bc22;
+          border-radius: 40px;
+        }
+
+        & .checkoutBtn {
+          width: 266px;
+          border: 2px solid #84bc22;
+          background: #84bc22;
+          padding: 8px 0;
+          margin-right: 13px;
+          color: #fff;
+          border-radius: 40px;
+        }
+      }
+
+      & .subTotal {
+        @include flexStyle();
+        max-width: 288px;
+        margin-bottom: 44px;
+
+        & .subTotalTitle {
+          font-size: 14px;
+          font-weight: 400;
+        }
+
+        & .subTotalPrice {
+          font-size: 14px;
+          font-weight: 900;
+        }
+      }
+
+      & .shipping {
+        max-width: 415px;
+        @include flexStyle();
+        align-items: flex-start !important;
+
+        margin-bottom: 44px;
+
+        & .shippingTitle {
+          font-size: 14px;
+          font-weight: 900;
+        }
+
+        & .feeHandling {
+          width: 170px;
+          text-align: left;
+          position: relative;
+
+          & #fee {
+            height: 20px;
+            width: 20px;
+            background-color: transparent;
+            margin: 0 13px 13px 0;
+            border: 1px solid #e8e2d6;
+          }
+
+          & .feeTitle {
+            font-size: 14px;
+            margin-top: 0;
+            font-weight: 700;
+            position: absolute;
+            left: 30px;
+
+            & span {
+              font-size: 14px;
+              font-weight: 900;
+            }
+          }
+        }
+      }
+
+      & .order {
+        @include flexStyle();
+        max-width: 390px;
+
+        & .orderTitle {
+          font-size: 14px;
+          font-weight: 900;
+        }
+
+        & .orderPrice {
+          font-size: 48px;
+          font-weight: 900;
+        }
+      }
+    }
+  }
+}
+
+//ShoppingQuantity
+.ShoppingQuantity {
+  width: 80px;
+  height: 30px;
+  border: 1px solid #b2b2b2;
+  border-radius: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  & button {
+    border: 0;
+    background-color: unset;
+    color: #b2b2b2;
+
+    &:focus {
+      outline: unset !important;
+    }
+  }
+}
+
+//Shopping card responsive
+
+@media screen and (min-width: 768px) and (max-width: 1280px) {
+  .shoppingCart {
+    padding: 32px 20px;
+
+    & .shoppingHead {
+      font-size: 38px;
+
+      &::before {
+        width: 180px;
+        top: 22px;
+      }
+
+      &::after {
+        width: 180px;
+        top: 22px;
+      }
+    }
+
+    & .shoppingBody {
+      padding: 55px 35px 23px;
+
+      & .shoppingItem {
+        margin-bottom: 40px;
+
+        & .itemInfo {
+          max-width: 350px;
+
+          & .itemText {
+            padding-left: 10px;
+          }
+        }
+
+        & .itemPricing {
+          width: 275px;
+
+          & .pricePerItem {
+            font-size: 20px;
+          }
+        }
+      }
+    }
+
+    & .billing {
+      align-items: flex-start !important;
+      padding: 30px 25px 45px;
+
+      & .shoppingCoupon {
+        & .useCoupon {
+          text-align: left;
+
+          & .enterCoupon {
+            width: fit-content;
+            padding: 8px 10px;
+            margin-bottom: 20px;
+          }
+        }
+      }
+
+      & .checkout {
+        & .updateCart {
+          text-align: right;
+          margin-bottom: 44px;
+
+          & .updateCartBtn {
+            width: 165px;
+            margin-bottom: 20px;
+          }
+        }
+
+        & .subTotal {
+          & .subTotalTitle {
+            font-size: 20px;
+          }
+
+          & .subTotalPrice {
+            font-size: 20px;
+          }
+        }
+
+        & .shipping {
+          margin-bottom: 34px;
+        }
+
+        & .order {
+          & .orderPrice {
+            font-size: 38px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width:320px) and (max-width:767px){
+  .shoppingCart {
+  padding: 20px 20px;
+
+  & .shoppingHead {
+    font-size: 28px;
+    margin-bottom: 30px;
+
+    &::before {
+      width: 20px;
+      top: 17px;
+    }
+
+    &::after {
+      width: 20px;
+      top: 17px;
+    }
+  }
+
+  & .shoppingBody {
+    padding: 15px 5px 43px;
+    margin-bottom: 2px;
+
+    & .shoppingItem {
+      flex-direction: column;
+      align-items: center;
+      margin: 0px 0 20px;
+      padding-top: 5px;
+      box-shadow: 
+       inset 0 -3em 3em rgba(0,0,0,0.1), 
+             0 0  0 2px rgb(255,255,255),
+             0.3em 0.3em 1em rgba(0,0,0,0.3);
+      & .itemInfo {
+        padding-top: 20px;
+        flex-direction: column;
+        align-items: center;
+
+        & .itemImg {
+          height: 150px;
+          width: 90%;
+        }
+
+        & .itemText {
+          text-align: center;
+          padding-left: 0;
+          margin-bottom: 20px;
+
+          & .textPrice {
+            display: none;
+          }
+        }
+      }
+
+      & .itemPricing {
+        width: 250px;
+        padding-bottom: 20px;
+
+        & .pricePerItem {
+          font-size: 20px;
+        }
+
+        & .deleteBtn {
+          background-color: rgb(150, 96, 96);
+        }
+      }
+    }
+  }
+
+  & .billing {
+    flex-direction: column;
+    align-items: center !important;
+    padding: 40px 20px 45px;
+
+    & .shoppingCoupon {
+      margin-bottom: 30px;
+      width: 100%;
+      & .useCoupon {
+        display: flex;
+        justify-content: space-between;
+        & .enterCoupon {
+          width: 122px;
+          margin: 0 10px;
+          padding: 3px 0 3px 5px;
+          font-size: 10px;
+        }
+
+        & .applyBtn {
+          width: 70px;
+          font-size: 10px;
+          padding: 3px 0;
+        }
+      }
+    }
+
+    & .checkout {
+      & .updateCart {
+        width: 100%;
+        margin-bottom: 24px;
+
+        & .updateCartBtn {
+          width: 80px;
+          font-size: 10px;
+          padding: 3px 0;
+          margin: 0;
+        }
+
+        & .checkoutBtn {
+          width: 150px;
+          font-size: 10px;
+          padding: 3px 0;
+          margin: 0 5px;
+        }
+      }
+
+      & .subTotal {
+        max-width: 100%;
+        margin-bottom: 10px;
+
+        & .subTotalTitle {
+          font-size: 14px;
+          font-weight: 400;
+        }
+
+        & .subTotalPrice {
+          font-size: 14px;
+          font-weight: 900;
+        }
+      }
+
+      & .shipping {
+        max-width: 100%;
+        @include flexStyle();
+        flex-direction: column;
+        align-items: center !important;
+
+        margin-bottom: 24px;
+
+        & .shippingTitle {
+          font-size: 14px;
+          font-weight: 900;
+          margin-bottom: 20px;
+        }
+
+        & .feeHandling {
+          width: 170px;
+          text-align: left;
+          position: relative;
+        }
+      }
+
+      & .order {
+        @include flexStyle();
+        max-width: 390px;
+
+        & .orderTitle {
+          font-size: 14px;
+          font-weight: 900;
+        }
+
+        & .orderPrice {
+          font-size: 20px;
+          font-weight: 900;
+        }
+      }
+    }
+  }
+}
+
+}

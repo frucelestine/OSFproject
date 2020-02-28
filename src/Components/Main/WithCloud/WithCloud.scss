@@ -1,0 +1,258 @@
+.withCloudContainer {
+  overflow: hidden;
+  display: flex;
+  margin-top: 80px;
+  justify-content: space-between;
+  background-color: #ffffff;
+  padding: 25px 55px;
+}
+
+// Slider Styles
+.slider {
+  max-width: 870px;
+  position: relative;
+}
+
+//Slider Dots
+.slick-dots li button:before {
+  color: #ffffff !important;
+  width: 30px;
+  height: 30px;
+}
+
+.slick-dots li.slick-active button:before {
+  width: 12px;
+  height: 12px;
+  opacity: 1;
+  border: 3px solid #ffffff;
+  top: 5px;
+  content: " ";
+  background-position: center;
+  border-radius: 50%;
+}
+
+.sliderImage {
+  width: inherit;
+  height: 507px;
+  border: 1px solid #ffffff;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.sliderGroup {
+  position: relative;
+  box-sizing: border-box;
+}
+
+.sliderText {
+  font-family: "Lato", sans-serif;
+  position: absolute;
+  z-index: 9;
+  width: 100%;
+  padding: 77px 0 0 60px;
+  color: #ffffff;
+  max-width: 663px;
+
+  &.textB {
+    text-align: center;
+    margin-top: 77px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 0;
+
+    & .secondaryText {
+      margin: 0 auto 30px;
+    }
+  }
+
+  &.textC {
+    text-align: right;
+    right: 60px;
+
+    & .secondaryText {
+      margin: 0 0 30px auto;
+    }
+  }
+
+  & .mainText {
+    font-weight: 900;
+    font-size: 48px;
+    margin-bottom: 80px;
+  }
+
+  & .secondaryText {
+    font-size: 14px;
+    font-weight: 400;
+    max-width: 336px;
+    margin-bottom: 30px;
+  }
+
+  & #moreBtn {
+    border-radius: 20px;
+    border-color: #ffffff;
+    color: #ffffff;
+    width: 150px;
+
+    &:focus{
+      outline: unset;
+    }
+  }
+}
+
+//Discount Styles
+
+.discountContainer {
+  text-align: center;
+  max-width: 270px;
+
+  & .discountPaper {
+    height: 335px;
+    color: #ffffff;
+    position: relative;
+    text-align: center;
+    width: 270px;
+    background:url("../../../Images/palmTree.png") no-repeat;
+    border-radius: 5px;
+    
+
+    & .discountPercent {
+      font-size: 100px;
+      font-weight: 900;
+      padding-top: 30px;
+      margin-bottom: 68px;
+    }
+
+    & .percentDescribe {
+      font-size: 24px;
+      font-weight: 400;
+      max-width: 114px;
+      z-index: 999;
+      margin: 0 auto;
+    }
+
+    & .palmTree {
+      position: absolute;
+      left: 0;
+      z-index: 1;
+      overflow: hidden;
+      bottom: 0px;
+    }
+  }
+
+  & .followUS {
+    font-size: 18px;
+    font-weight: 400;
+    color: #777471;
+    padding: 30px 0 15px;
+  }
+
+  & .followDescribe {
+    font-size: 13px;
+    color: #777471;
+    max-width: 190px;
+    margin: auto;
+    padding-bottom: 20px;
+  }
+
+  & #percentBtn {
+    border-radius: 20px;
+    border-color: #3a5b96;
+    color: #3a5b96;
+    width: 150px;
+
+    &:hover {
+      background-color: #3a5b96;
+      color: #ffffff;
+    }
+
+    &:focus{
+      outline: unset;
+    }
+  }
+}
+
+//Media Queries
+
+@media screen and (min-width: 768px) and (max-width: 1280px) {
+  body {
+    width: 768px;
+  }
+  .withCloudContainer {
+    padding: 10px 20px;
+    width: 100%;
+  }
+
+  .sliderImage {
+    height: 400px;
+  }
+
+  .slider {
+    max-width: 485px;
+  }
+
+  .sliderText .mainText {
+    font-size: 32px;
+    margin-bottom: 40px;
+  }
+
+  .discountPaper {
+    height: 250px !important;
+    width: 220px !important;
+  }
+
+  .discountPercent {
+    font-size: 70px !important;
+    margin-bottom: 50px !important;
+  }
+
+  .percentDescribe {
+    font-size: 24px;
+    max-width: 114px;
+  }
+
+  .palmTree {
+    display: none;
+  }
+
+  .followUS {
+    padding: 15px 0 10px !important;
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .withCloudContainer {
+    padding: 15px;
+    box-sizing: border-box;
+    display: block;
+  }
+  .discountContainer {
+    display: none;
+  }
+
+  .textC {
+    right: 10px !important;
+  }
+
+  .sliderText {
+    padding: 20px;
+  }
+
+  .mainText {
+    font-size: 28px !important;
+  }
+
+  .secondaryText {
+    margin-bottom: 50px;
+    padding: 0 15px !important;
+  }
+
+  #moreBtn {
+    margin: 0 auto;
+    text-decoration: none !important;
+  }
+
+  .sliderImage {
+    border-radius: 5px !important;
+    height: 473px;
+  }
+}

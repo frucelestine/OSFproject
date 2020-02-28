@@ -1,0 +1,229 @@
+//Burger styles
+@mixin menuExp {
+  display: flex;
+  background-color: #262a32;
+  flex-direction: column;
+  // background-color: #262a32;
+}
+
+@mixin menu-title {
+  font-family: "Lato", sans-serif;
+  font-size: 13px;
+  color: #ffffff;
+}
+
+@mixin menuButton {
+  background-color: #262a32;
+  border-width: 0;
+  padding: 0;
+  max-height: 4px;
+  color: #fff;
+}
+
+#BurgerNav {
+  display: none;
+}
+
+.dropdown {
+  height: 40px;
+
+  &:focus{
+    outline: unset;
+  }
+}
+
+#simple-menu {
+margin-bottom: -17px;
+  & .MuiIconButton-label{
+    color: #fff;
+  }
+  & .main-menu {
+    @include menuButton();
+    border-image-width: 0 !important;
+    height: 10px;
+
+    & .dropdown-basic-button {
+      font-family: "Lato", sans-serif;
+      font-weight: 700;
+      font-size: 13px;
+      border-image-width: 0 !important;
+      border-color: transparent;
+      color: #ffffff;
+    }
+  }
+
+  & .menu-exp {
+    @include menuExp();
+    
+  }
+
+  & .main-menu{
+    padding: 0 10px;
+  }
+
+  & .sub-menu-exp {
+    @include menuExp();
+
+    & .menu-link{
+      color: #fff;
+      text-decoration: none;
+      font-size: 11px;
+    }
+  }
+
+  & .sub-menu {
+    @include menuButton();
+
+  }
+
+  & .sub-menu-title{
+    font-size: 13px;
+    font-weight: 400;
+  }
+
+  & .MuiExpansionPanelSummary-root.Mui-expanded {
+    min-height: 30px !important;
+  }
+
+  & .MuiPaper-elevation1 {
+    box-shadow: unset !important;
+  }
+
+    & .MuiExpansionPanelSummary-content.Mui-expanded{
+      margin: 0 !important;
+    }
+
+    & .MuiExpansionPanelDetails-root{
+      padding: 8px 24px 10px !important;
+    }
+  
+}
+
+#dropdown-basic-button {
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  margin-bottom: 33px;
+  font-size: 13px;
+  background-color: unset;
+  border-width: 0;
+  color: #ffffff;
+
+  &::after {
+    position: absolute;
+    right: 4%;
+  }
+
+  &:focus {
+    box-shadow: unset;
+    border-color: #ffffff;
+  }
+}
+
+.MuiMenu-list {
+  background-color: #262a32;
+  padding: 10px;
+}
+
+.MuiPaper-rounded {
+  border-width: 0 !important;
+  border-radius: 0 !important;
+}
+
+#burgerImg {
+  width: 270px;
+  height: 274px;
+  object-fit: cover;
+  border-radius: 5px;
+  display: block;
+  padding-bottom: 15px;
+  margin: 150px auto 0px;
+}
+
+//MobileIcons
+
+.MobileIcons {
+  display: none;
+  height: 55px;
+  background-color: #262a32;
+}
+
+#footIcons {
+  display: block;
+  width: 224px;
+  width: 100%;
+  padding: 18px 55px 10px;
+  display: flex;
+  justify-content: space-between;
+
+  & .fas,
+  .far {
+    color: #a2a09e;
+    cursor: pointer;
+    width: 25px;
+    height: 25px;
+
+    &:hover {
+      color: #fff;
+    }
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1280px) {
+  .NavBar {
+    max-width: 768px;
+  }
+
+  #BurgerNav {
+    display: block;
+  }
+
+  .navMenu {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .logoTitle,
+  .NavSelect,
+  .icons {
+    display: none !important;
+  }
+
+  .fas,
+  .far {
+    position: relative;
+  }
+
+  .wishCounter,
+  .cartCount {
+    background-color: #262a32;
+  }
+
+  .NavBar {
+    padding: 12px 20px;
+    justify-content: start;
+  }
+
+  #BurgerNav {
+    display: block;
+  }
+
+  .navMenu {
+    display: none;
+  }
+
+  .NavBar .logoType {
+    width: 61px;
+    position: absolute;
+    top: 10px;
+    right: 50%;
+    transform: translateX(43%);
+  }
+
+  .MobileIcons {
+    display: block;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+  }
+}
