@@ -2,6 +2,8 @@
   "name": "osf-project",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://frucelestine.github.io/OSFglobal",
+  
   "dependencies": {
     "@material-ui/core": "^4.9.1",
     "@material-ui/icons": "^4.9.1",
@@ -38,13 +40,13 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "predeploy": "",
+    "preDeploy": "",
     "deploy": ""
   },
   "eslintConfig": {
     "extends": "react-app"
   },
-  "browserslist": {
+  "browsersList": {
     "production": [
       ">0.2%",
       "not dead",
