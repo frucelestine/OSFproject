@@ -1,0 +1,43 @@
+{
+  "files": {
+    "main.css": "/static/css/main.9bb4ac20.chunk.css",
+    "main.js": "/static/js/main.a834615e.chunk.js",
+    "main.js.map": "/static/js/main.a834615e.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.39db6937.js",
+    "runtime-main.js.map": "/static/js/runtime-main.39db6937.js.map",
+    "static/css/2.5a62f577.chunk.css": "/static/css/2.5a62f577.chunk.css",
+    "static/js/2.20ca70ce.chunk.js": "/static/js/2.20ca70ce.chunk.js",
+    "static/js/2.20ca70ce.chunk.js.map": "/static/js/2.20ca70ce.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.3e9e5f50d65f1cbaaf04912cfe866dc9.js": "/precache-manifest.3e9e5f50d65f1cbaaf04912cfe866dc9.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/2.5a62f577.chunk.css.map": "/static/css/2.5a62f577.chunk.css.map",
+    "static/css/main.9bb4ac20.chunk.css.map": "/static/css/main.9bb4ac20.chunk.css.map",
+    "static/js/2.20ca70ce.chunk.js.LICENSE.txt": "/static/js/2.20ca70ce.chunk.js.LICENSE.txt",
+    "static/media/Banner.scss": "/static/media/banner.f2bae2a5.jpg",
+    "static/media/dropImg.jpg": "/static/media/dropImg.d7c20fa2.jpg",
+    "static/media/img1.jpg": "/static/media/img1.019721be.jpg",
+    "static/media/img2.jpg": "/static/media/img2.10cab95c.jpg",
+    "static/media/img3.jpg": "/static/media/img3.64b05e7a.jpg",
+    "static/media/img4.jpg": "/static/media/img4.643cd82c.jpg",
+    "static/media/WithCloud.scss": "/static/media/palmTree.0b6611fa.png",
+    "static/media/prod.jpg": "/static/media/prod.dce4ec39.jpg",
+    "static/media/prod2.jpg": "/static/media/prod2.0e3083cf.jpg",
+    "static/media/prod3.jpg": "/static/media/prod3.2960ea02.jpg",
+    "static/media/prod4.jpg": "/static/media/prod4.1c225b2c.jpg",
+    "static/media/prod5.jpg": "/static/media/prod5.3adfc276.jpg",
+    "static/media/prod6.jpg": "/static/media/prod6.c72df77d.jpg",
+    "static/media/prod7.jpg": "/static/media/prod7.eb5f88da.jpg",
+    "static/media/prod8.jpg": "/static/media/prod8.4abbbf04.jpg",
+    "static/media/sale03.jpg": "/static/media/sale03.48f537a4.jpg",
+    "static/media/slick-theme.css": "/static/media/slick.f97e3bbf.svg",
+    "static/media/sliderImg.jpg": "/static/media/sliderImg.97edac89.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.39db6937.js",
+    "static/css/2.5a62f577.chunk.css",
+    "static/js/2.20ca70ce.chunk.js",
+    "static/css/main.9bb4ac20.chunk.css",
+    "static/js/main.a834615e.chunk.js"
+  ]
+}
